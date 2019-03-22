@@ -4,5 +4,8 @@ Rails.application.routes.draw do
 
   #GET request -> to the pages controller and serv the about view
   get 'about' => 'pages#about'
-  get 'my_test' => 'contact#test'
+  get 'contact' => 'pages#contact'
+
+  #Automatically tell Rails to crete routes for 'posts'
+  resources :posts
 end
